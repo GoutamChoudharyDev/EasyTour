@@ -1,0 +1,59 @@
+@media screen and (max-width:768px) {
+    .menu-web {
+        display: none;
+    }
+
+    .ham-menu {
+        display: inline-block;
+    }
+
+    .menu-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        top: 2.95rem;
+        border-top: 2px solid gray;
+    }
+
+    .menu-mobile ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 30px;
+        margin-top: 12px;
+    }
+
+    .NavControls{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+    }    
+
+    .Navbtn {
+        padding: 2px 17px;
+        border: 1px solid rgb(68, 68, 68);
+        background-color: aqua;
+        border-radius: 45px;
+        color: rgb(68, 68, 68);
+        font-weight: 600;
+    }
+}
+
+/* For Mobile Phones */
+@media(max-width:426px){
+    .Navbar{
+        position: absolute;
+        top: 0px;
+        border-radius:0px;
+        height: 11vh;
+    }
+
+    .menu-mobile{
+        top: 4.3rem;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+}

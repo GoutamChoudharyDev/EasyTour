@@ -1,0 +1,26 @@
+.HomeCarousel {
+    width: 100%;
+    height: 100vh;
+}
+
+.HomeCarousel video {
+    object-fit: cover;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+/* HomeSlider Buttons */
+.carousel-indicators [data-bs-target] {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 2px solid orangered;
+    margin-left: 12px;
+}
+
+.HomeNavbar{
+    display: flex;
+    justify-content: center;
+}
+

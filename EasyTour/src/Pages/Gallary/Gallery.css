@@ -1,0 +1,50 @@
+.GalleryContainer {
+    padding: 0.5rem;
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.ParentCard{
+    width: 350px;
+    height: 320px;
+    display: flex;
+    margin-top: 12px;
+}
+/* Heading styles */
+.GalleryHeading{
+    color: #4a4e69;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 1.2s ease-in-out;
+  }
+.card{
+    width: 450px;
+    height: 310px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.04);
+}
+.card img {
+    aspect-ratio: 3/2;
+    height: 230px;
+}
+
+.card-title{
+    line-height: 1.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-text{
+    line-height: 16px;
+    font-size: 12px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}

@@ -38,10 +38,11 @@ const App = () => {
   ]);
 
   return (
-    <div>
-      {/*Use React-Route-Dom */}
-      <RouterProvider router={router} />
-    </div>
+      <div>
+        {/*Use React-Route-Dom */}
+        <RouterProvider router={router} />
+        <Gallery />
+      </div>
   )
 }
 

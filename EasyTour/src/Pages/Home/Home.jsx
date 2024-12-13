@@ -1,6 +1,7 @@
 // Imported Component and files
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Home.css"
+import "./HQuery.css"
 
 const Home = () => {
     return (

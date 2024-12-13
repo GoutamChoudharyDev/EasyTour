@@ -1,0 +1,33 @@
+/* For Mobile Phones */
+@media(max-width:426px){
+    .card{
+        width: 325px;
+        height: 315px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+        height: 215px;
+    }
+
+    .ParentCard{
+        margin-top: 18px;
+    }
+
+    .card-text{
+        font-size: 13px;
+    }
+
+    .card-title{
+       margin-top: 6px;
+    }
+
+    .GalleryHeading{
+        margin-top: 2px;
+        letter-spacing: 1px;
+        font-size: 18px;
+        animation: slideIn 1.2s ease-in-out;
+        height: 28px;
+      }
+}

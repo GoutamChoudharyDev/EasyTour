@@ -1,11 +1,11 @@
 /* For Laptop */
-@media(max-width:768px) {
-
-}
 
 /* For Tablets */
 @media(max-width:480px) {
-
+    .HomeCarousel {
+        width: 100%;
+        height: 92.4vh;
+    }
 }
 
 /* For Mobile Phones */

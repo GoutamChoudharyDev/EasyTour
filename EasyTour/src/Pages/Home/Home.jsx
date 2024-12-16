@@ -5,8 +5,8 @@ import "./HQuery.css"
 
 const Home = () => {
     return (
-        <div classNameName="container-fluid">
-
+        <section classNameName="container-fluid">
+            
             {/* Navbar */}
             <header className="HomeNavbar"><Navbar /></header>
 
@@ -31,7 +31,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

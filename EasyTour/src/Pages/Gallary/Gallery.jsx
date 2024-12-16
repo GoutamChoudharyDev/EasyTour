@@ -1,7 +1,6 @@
 import './Gallery.css'
 import './GalleryMQ.css'
 
-
 // ################## Gallery's Data #################### //
 const attractions = [
   {
@@ -39,31 +38,31 @@ const attractions = [
 // ################## Gallery Component #################### //
 const Gallery = () => {
   return (
-    <div>
-      <div>
-        <div className="GalleryContainer container">
-          <h2 className="text-center GalleryHeading">virtual tour</h2>
-          <div className="row d-flex justify-content-center alighn-items-center">
-
-            {attractions.map((attraction, index) => (
-              <div className="ParentCard col d-flex justify-content-center alighn-items-center" key={index}>
-                <div className="card">
-                  <img
-                    src={attraction.image}
-                    alt={attraction.name}
-                    className="card-img-top"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{attraction.name}</h5>
-                    <p className="card-text">{attraction.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+    <section className="GalleryContainer container">
+      <div className="GallerySubContainer">
+        <h2 className="text-center GalleryHeading"><span className='E'>V</span>irtual <span className='E'>T</span>
+          our</h2>
+      <div className="underline"></div>
       </div>
-    </div>
+      <div className="row d-flex justify-content-center alighn-items-center">
+
+        {attractions.map((attraction, index) => (
+          <div className="ParentCard col d-flex justify-content-center alighn-items-center" key={index}>
+            <div className="card">
+              <img
+                src={attraction.image}
+                alt={attraction.name}
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h5 className="card-title">{attraction.name}</h5>
+                <p className="card-text">{attraction.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 

@@ -1,0 +1,76 @@
+/* General Container Styling */
+.HotelContainer {
+  margin-top: 30px;
+  padding: 20px;
+  max-height: 100%;
+}
+
+.HotelSubContainer {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HotelHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: #4a4e69;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideIn 1.2s ease-in-out;
+  font-weight: 600;
+}
+
+.underline1 {
+  width: 20vw;
+  border-radius: 5px;
+  border: 4px solid rgb(0, 189, 207);
+}
+
+/* Card Styling */
+.Hotelcard {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 10px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Hotelcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.hotel-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Card Title */
+.cardtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.cardbody {
+  border-top: 1px solid rgb(70, 70, 70);
+  width: 100%;
+  height: 60px;
+}

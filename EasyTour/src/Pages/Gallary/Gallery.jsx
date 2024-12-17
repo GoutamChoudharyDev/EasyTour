@@ -42,8 +42,9 @@ const Gallery = () => {
       <div className="GallerySubContainer">
         <h2 className="text-center GalleryHeading"><span className='E'>V</span>irtual <span className='E'>T</span>
           our</h2>
-      <div className="underline"></div>
+        <div className="underline"></div>
       </div>
+      
       <div className="row d-flex justify-content-center alighn-items-center">
 
         {attractions.map((attraction, index) => (

@@ -1,0 +1,27 @@
+ /* Responsive Design */
+ @media (max-width: 768px) {
+    .HotelHeading {
+      font-size: 2rem;
+    }
+  
+    .hotel-img {
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+
+    .HotelHeading {
+      font-size: 1.8rem;
+    }
+  
+    .hotel-img {
+      height: 150px;
+      padding: 10px;
+    }
+  
+    .Hotelcard {
+      margin: 10px 0;
+    }
+  }
+  

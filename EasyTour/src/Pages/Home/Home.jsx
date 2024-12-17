@@ -6,12 +6,11 @@ import "./HQuery.css"
 const Home = () => {
     return (
         <section classNameName="container-fluid">
-            
             {/* Navbar */}
             <header className="HomeNavbar"><Navbar /></header>
 
             {/* Carousel */}
-            <div id="carouselExampleIndicators" className="carousel slide">
+            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

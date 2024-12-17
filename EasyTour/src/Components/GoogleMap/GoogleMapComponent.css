@@ -1,6 +1,6 @@
 .GoogleMapContainer {
     width: 100%;
-    height: 90vh;
+    max-height: 100%;
     margin-top: 0px;
     display: flex;
     flex-direction: column;

@@ -1,10 +1,12 @@
 // Import Components
+import './App.css'
 import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
 import Gallery from './Pages/Gallary/Gallery'
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import GoogleMapComponent from './Components/GoogleMap/GoogleMapComponent';
+import HotelBooking from './Components/HotelBooking/HotelBooking';
 
 // Import React-Router-Dom
 import {
@@ -39,12 +41,13 @@ const App = () => {
   ]);
 
   return (
-      <div>
-        {/*Use React-Route-Dom */}
-        <RouterProvider router={router} />
-        <GoogleMapComponent/>
-        <Gallery />
-      </div>
+    <div>
+      {/*Use React-Route-Dom */}
+      <RouterProvider router={router} />
+      <Gallery />
+      <GoogleMapComponent />
+      <HotelBooking />
+    </div>
   )
 }
 

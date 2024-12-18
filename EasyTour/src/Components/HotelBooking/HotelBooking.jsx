@@ -6,7 +6,7 @@ const websites = [
     {
         name: "MakeMyTrip",
         url: "https://www.makemytrip.com",
-        image: "makemytrip_logo.png",
+        image: "makemytripimgnew.png",
     },
     {
         name: "Agoda",
@@ -70,6 +70,5 @@ const HotelBooking = () => {
         </section>
     );
 };
-
 
 export default HotelBooking;

@@ -1,0 +1,27 @@
+ /* Responsive Design */
+ @media (max-width: 768px) {
+    .VehicleHeading {
+      font-size: 2rem;
+    }
+  
+    .Vehicle-img {
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+
+    .VehicleHeading {
+      font-size: 1.8rem;
+    }
+  
+    .Vehicle-img {
+      height: 150px;
+      padding: 10px;
+    }
+  
+    .Vehiclecard {
+      margin: 10px 0;
+    }
+  }
+  

@@ -5,8 +5,7 @@ import About from './Pages/About/About'
 import Gallery from './Pages/Gallary/Gallery'
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
-import GoogleMapComponent from './Components/GoogleMap/GoogleMapComponent';
-import HotelBooking from './Components/HotelBooking/HotelBooking';
+import Group from './Components/Group/Group';
 
 // Import React-Router-Dom
 import {
@@ -44,9 +43,7 @@ const App = () => {
     <div>
       {/*Use React-Route-Dom */}
       <RouterProvider router={router} />
-      <Gallery />
-      <GoogleMapComponent />
-      <HotelBooking />
+      <Group/>
     </div>
   )
 }

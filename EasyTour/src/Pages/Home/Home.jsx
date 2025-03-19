@@ -2,6 +2,11 @@
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Home.css"
 import "./HQuery.css"
+import Gallery from "../Gallary/Gallery";
+import GoogleMapComponent from "../../Components/GoogleMap/GoogleMapComponent"
+import HotelBooking from "../../Components/HotelBooking/HotelBooking"
+import VehicleBooking from "../../Components/VehicleBooking/VehicleBooking"
+import Footer from "../Footer/Footer"
 
 const Home = () => {
     return (
@@ -30,6 +35,19 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Hero Section */}
+            <main>
+                <Gallery />
+                <GoogleMapComponent />
+                <HotelBooking />
+                <VehicleBooking />
+            </main>
+
+            {/* Footer */}
+            <footer>
+                <Footer />
+            </footer>
         </section>
     )
 }

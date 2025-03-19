@@ -11,14 +11,34 @@ const Login = () => {
 
     // HandleSubmit function
     const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!email || !password) {
-            setError('Please fill in both fields.');
-        } else {
-            setError('');
-            // Add your login here
-            console.log('Logging in with', email, password);
-        }
+        // e.preventDefault();
+        // if (!email || !password) {
+        //     setError('Please fill in both fields.');
+        // } else {
+        //     setError('');
+        //     // Add your login here
+        //     console.log('Logging in with', email, password);
+        // }
+
+        // .................backend..................
+        fetch('http://localhost:5000/api/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.error) {
+                    setError(data.error);
+                } else {
+                    console.log('Login successful:', data);
+                    // Save token to localStorage or context
+                }
+            })
+            .catch((err) => console.error('Error:', err));
+        // .................backend..................
     };
 
     return (

@@ -1,52 +1,37 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css';
+import './Login.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Signup = () => {
 
-    // Use States
+    // Use States 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
 
-    // HandleSubmit function
+    const navigate = useNavigate();
+
+    // HandleSubmit Function
     const handleSubmit = (e) => {
-        // e.preventDefault();
-        // if (!email || !password) {
-        //     setError('Please fill in both fields.');
-        // } else {
-        //     setError('');
-        //     // Add your login here
-        //     console.log('Logging in with', email, password);
-        // }
-
-        // .................backend..................
-        fetch('http://localhost:5000/api/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password }),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.error) {
-                    setError(data.error);
-                } else {
-                    console.log('Login successful:', data);
-                    // Save token to localStorage or context
+        e.preventDefault();
+        axios.post('http://localhost:3001/login', { email, password })
+            .then(result => {
+                console.log(result)
+                if(result.data ==="Success"){
+                    navigate('/home')
                 }
             })
-            .catch((err) => console.error('Error:', err));
-        // .................backend..................
+            .catch(err => console.log(err))
+        console.log('Signing up with', email, password);
     };
 
     return (
-        <div className="login-container">
-            <div className="login-card">
-                <h2 className="login-title">LOGIN FORM</h2>
-                {error && <div className="error-message">{error}</div>}
+        <div className="signup-container">
+            <div className="signup-card">
+                <h2 className="signup-title">Login</h2>
                 <form onSubmit={handleSubmit}>
+
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
                         <input
@@ -71,14 +56,14 @@ const Login = () => {
                         />
                     </div>
 
-                    <button type="submit" className="login-btn">Login</button>
+                    <button type="submit" className="signup-btn">Login</button>
                 </form>
-                <div className="signup-link">
-                    Don't have an account? <Link to="/signup">Signup</Link>
+                <div className="login-link">
+                    Already have an account? <Link to="/signup">Signup</Link>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Login
+export default Signup

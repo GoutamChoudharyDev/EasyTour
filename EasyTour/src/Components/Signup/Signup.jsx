@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Signup.css'
-
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -12,16 +13,23 @@ const Signup = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
 
+    const navigate = useNavigate();
+
     // HandleSubmit Function
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!name || !email || !password || !confirmPassword) {
+        if (!name || !email || !password) {
             setError('All fields are required.');
         } else if (password !== confirmPassword) {
             setError('Passwords do not match.');
         } else {
             setError('');
             // Add your sign-up logic here
+            axios.post('http://localhost:3001/register', {name, email, password})
+            .then(result => {console.log(result)
+                navigate('/login')
+            })
+            .catch(err=> console.log(err))
             console.log('Signing up with', name, email, password);
         }
     };

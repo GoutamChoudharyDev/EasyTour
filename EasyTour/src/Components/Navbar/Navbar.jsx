@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css"
 import "./NavMQ.css"
 import { Link } from "react-router-dom";
+import Logout from "../Logout/Logout";
 
 const Navbar = () => {
 
@@ -33,8 +34,8 @@ const Navbar = () => {
 
           {/* Nav Login and Signup Buttons*/}
           <div className="NavControls">
-            <button className="Navbtn" type="submit"><Link to="/login">Login</Link></button>
             <button className="Navbtn" type="submit"><Link to="/signup">Signup</Link></button>
+            <Logout/>
           </div>
         </div>
 

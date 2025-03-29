@@ -1,37 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Login.css'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
+import axios from 'axios';
 
-const Signup = () => {
-
-    // Use States 
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    // HandleSubmit Function
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:3001/login', { email, password })
             .then(result => {
-                console.log(result)
-                if(result.data ==="Success"){
-                    navigate('/home')
+                if (result.data.success) {
+                    // Save the JWT token to localStorage
+                    localStorage.setItem('token', result.data.token);
+                    navigate('/home');
+                } else {
+                    setError(result.data.message || 'Login failed.');
                 }
             })
-            .catch(err => console.log(err))
-        console.log('Signing up with', email, password);
+            .catch(err => console.log(err));
     };
 
     return (
         <div className="signup-container">
             <div className="signup-card">
                 <h2 className="signup-title">Login</h2>
+                {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit}>
-
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
                         <input
@@ -43,7 +41,6 @@ const Signup = () => {
                             required
                         />
                     </div>
-
                     <div className="input-group">
                         <label htmlFor="password">Password</label>
                         <input
@@ -55,15 +52,14 @@ const Signup = () => {
                             required
                         />
                     </div>
-
                     <button type="submit" className="signup-btn">Login</button>
                 </form>
                 <div className="login-link">
-                    Already have an account? <Link to="/signup">Signup</Link>
+                    Don't have an account? <Link to="/signup">Signup</Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Signup
+export default Login;

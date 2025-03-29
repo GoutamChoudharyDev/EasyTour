@@ -25,9 +25,9 @@ const Login = () => {
     };
 
     return (
-        <div className="signup-container">
-            <div className="signup-card">
-                <h2 className="signup-title">Login</h2>
+        <div className="login-container">
+            <div className="login-card">
+                <h2 className="login-title">Login</h2>
                 {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
@@ -52,7 +52,7 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="signup-btn">Login</button>
+                    <button type="submit" className="login-btn">Login</button>
                 </form>
                 <div className="login-link">
                     Don't have an account? <Link to="/signup">Signup</Link>

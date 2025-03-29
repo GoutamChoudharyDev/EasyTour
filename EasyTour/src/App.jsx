@@ -18,11 +18,10 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
-        <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
           <Route path="/" element={<Login />}></Route >
-          <Route path="/home" element={<Home />}></Route >
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/gallery" element={<Gallery />}></Route>
+          <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
+          <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>}></Route>
+          <Route path="/gallery" element={<ProtectedRoute><Gallery /></ProtectedRoute>}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/logout" element={<Logout />}></Route>

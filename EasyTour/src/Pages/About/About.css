@@ -1,0 +1,55 @@
+.about-page {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Heading */
+.about-page h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.about-page h2,
+.about-page h4 {
+  color: #222;
+}
+
+/* Highlighted word in heading */
+.highlight {
+  color: aqua;
+}
+
+/* Image styling */
+.about-page img {
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-page img:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mission Section */
+.mission-section {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  border: 1px solid #d1f3f8;
+}
+
+.mission-section h2 {
+  color: #007b8f;
+}
+
+/* Bullet points */
+.about-page ul li {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.about-page ul li::before {
+  margin-right: 8px;
+  color: aqua;
+}

@@ -18,8 +18,8 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Login />}></Route > */}
-          <Route path="/" element={<Home />}></Route >
+          <Route path="/" element={<Login />}></Route >
+          {/* <Route path="/" element={<Home />}></Route > */}
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>}></Route>
           <Route path="/gallery" element={<ProtectedRoute><Gallery /></ProtectedRoute>}></Route>

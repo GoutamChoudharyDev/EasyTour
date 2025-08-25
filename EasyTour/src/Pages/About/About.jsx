@@ -18,7 +18,7 @@ const About = () => {
         <div className="col-md-6 mb-4">
           <img
             src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1"
-            alt="About Easy Tour"
+            alt="About Easy-Tour"
             className="img-fluid rounded shadow"
           />
         </div>

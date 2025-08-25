@@ -4,6 +4,10 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');  // Add bcrypt for password hashing
 const jwt = require('jsonwebtoken');  // Add JWT for token-based auth
 const UserModel = require('./Models/User');
+const dotenv = require('dotenv');
+
+// Load .env file
+dotenv.config();
 
 const app = express();
 
@@ -11,10 +15,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/easytours-user");
+// MongoDB Connection
+mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => console.log("Connected to MongoDB Atlas"))
+    .catch(err => console.error("MongoDB Connection Error:", err));
 
-// Secret key for JWT
-const JWT_SECRET = 'your_secret_key';  // Use a more secure key in production
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Login route
 app.post('/login', (req, res) => {

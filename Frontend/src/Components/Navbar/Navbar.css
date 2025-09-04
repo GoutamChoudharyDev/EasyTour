@@ -1,0 +1,112 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, controls right */
+    align-items: center;
+    height: 8vh;
+    position: absolute;
+    top: 8px;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+/* Logo (always left) */
+.navLeft {
+    flex: 0 0 auto;
+}
+
+/* Desktop menu wrapper */
+.menu-web {
+    flex: 1; /* take full available space */
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    align-items: center;
+    position: relative;
+}
+
+/* Center navigation links */
+.menu-web ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-web ul li a {
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    font-weight: 600;
+}
+
+.menu-web ul li a:hover {
+    color: rgb(87, 205, 255);
+}
+
+/* Right-side controls */
+.NavControls {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.Navbtn {
+    padding: 5px 20px;
+    border: 1px solid rgb(68, 68, 68);
+    background-color: aqua;
+    border-radius: 45px;
+    font-weight: 600;
+}
+
+.Navbtn a {
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+}
+
+.Navbtn:hover {
+    background-color: rgb(87, 207, 255);
+}
+
+/* Logo styling */
+.HomeLogo {
+    font-size: 25px;
+    color: rgb(68, 68, 68);
+    font-weight: 700;
+}
+
+.E {
+    color: aqua;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: none; /* only visible in mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}

@@ -1,0 +1,99 @@
+/* ✅ Hide mobile menu by default (desktop view) */
+.menu-mobile {
+    display: none;
+}
+
+/* Tablet & Mobile Screens */
+@media screen and (max-width:768px) {
+    /* Hide desktop menu */
+    .menu-web {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex; /* visible only on mobile/tablet */
+    }
+
+    /* Mobile dropdown */
+    .menu-mobile {
+        display: flex; /* show only on mobile */
+        position: absolute;
+        top: 2.95rem;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top: 2px solid gray;
+
+        /* hidden by default */
+        transform: translateY(-200%);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-mobile.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px 0 0 0;
+        padding: 0;
+        gap: 12px;
+        list-style: none;
+    }
+
+    .menu-mobile ul li a {
+        text-decoration: none;
+        color: rgb(68, 68, 68);
+        font-weight: 600;
+    }
+
+    .menu-mobile ul li a:hover {
+        color: rgb(87, 205, 255);
+    }
+
+    .NavControls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin: 12px 0;
+    }
+
+    .Navbtn {
+        padding: 5px 20px;
+        border: 1px solid rgb(68, 68, 68);
+        background-color: aqua;
+        border-radius: 45px;
+        color: rgb(68, 68, 68);
+        font-weight: 600;
+    }
+}
+
+/* For smaller phones */
+@media(max-width:426px) {
+    .Navbar {
+        position: absolute;
+        top: 0;
+        border-radius: 0;
+        height: 12vh;
+        padding: 0 10px;
+    }
+
+    .menu-mobile {
+        top: 4.3rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
